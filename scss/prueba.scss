@@ -1,0 +1,216 @@
+@import "partials/headers";
+@import "partials/footer";
+@import "partials/section";
+@import "sass2/condicionales";
+@import "sass2/extend";
+@import "sass2/maps";
+@import "sass2/mixins";
+@import "sass2/operaciones";
+@import "variables/variables";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Source+Sans+Pro:wght@200&display=swap');
+
+
+
+form {
+    display: inline-block;
+    @include form
+}
+*{
+    @include todo;
+}
+
+
+nav{
+    background: #217E90;
+    height: 80px;
+    width: 100%;
+}
+
+@media screen and (max-width: 875px){
+    nav{
+        height: 80px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 799px){
+    nav{
+        height: 160px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+.logo{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    float: left;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 20px;
+    padding: 10px;  
+    float: none;
+}
+.sub{
+    text-align: left;
+    padding: 20px;
+}
+
+.lista{
+    text-align: center;
+}
+a{
+    color: $red;
+}
+body {
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    padding-bottom: 2em;
+    @include fondo;
+}
+
+form {
+    display: inline-block;
+    @include form
+}
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+@media(max-width: 480px){
+    form{
+        width: 100%;
+    }
+}
+
+.coment{
+    @include titulo
+}
+
+.div-main{
+    text-align: center;
+    color: black;
+    font-size: x-large;
+}
+.border{
+    margin-left: auto;
+    margin-right: auto;
+}
+.texto{
+    border: 1px solid black;
+}
+.shop{
+    height: $height;
+    text-align: center;
+    color: greenyellow;
+    animation-name: efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 5s;
+}
+
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color: violet;
+}
+.nav-link:active{
+    color: violet;
+}
+.campera{
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(3, 33);
+    grid-template-rows: repeat(1, 100%);
+    grid-template-areas:
+    "im1 im2 im3";
+}
+
+
+
+.grid{
+
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 33%);
+    padding: 20px;
+    grid-template-areas:
+    "img1 img2 img3"
+    "img4 img5 img6"
+    "img7 img8 img8"
+    ;
+}
+
+@media screen and (max-width: 875px){
+    .grid{
+        border: none;
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(8, 12.5%);
+        grid-template-areas:
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5" 
+        "img6"
+        "img7"
+        "img8"
+    }
+    .campera{
+        border: none;
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(3, 33%);
+        grid-template-areas:
+        "im1"
+        "im2"
+        "im3";
+    }
+}
+
+.img1{
+    @include grid
+};
+.img2{
+    @include grid
+};.img3{
+    @include grid
+};.img4{
+    @include grid
+};.img5{
+    @include grid
+};.img6{
+    @include grid
+};.img7{
+    @include grid
+};
+.img8{
+    @include grid
+}
+
